@@ -26,7 +26,7 @@ class MainController
                 $error = $e->getMessage();
             }
         }
-        $data = $this->model->getAll($_SESSION["userGuestObjects"]);
+        $data = $this->model->getAll($_SESSION["userGuestObjects"] ?? []);
         $this->show($data, $error);
     }
 
